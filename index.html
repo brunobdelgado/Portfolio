@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Meu Portfólio</title>
+</head>
+<body>
+    <header>
+      <h1>Portfólio de Bruno Delgado</h1>
+      <nav>
+        <ul>
+          <li><a href="#introducao">Introdução</a></li>
+          <li><a href="#experiencia">Experiência</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section id="introducao">
+      <h2>Introdução</h2>
+      <p>Olá, me chamo Bruno Delgado e este é o meu portfolio. Tenho 20 anos e sou completamente apaixonado por Programação e Tecnologia, aqui no meu portfolio encontrará informações sobre a minha experiência profissional e alguns dos projetos que já trabalhei.</p>
+    </section>
+    <section id="experiencia">
+      <h2>Experiência</h2>
+      <ul>
+        <li>
+          <h3>Termolar SA</h3>
+          <p>Cargo: Menor Aprendiz de TI</p>
+        <p>Período: Agosto de 2021 a atual</p>
+        <p>Responsabilidades: Manutenção e Conserto de computadores e Desenvolmento de aplicações front-end, utilizando HTML, CSS e JavaScript.</p>
+      </li>
+      <li>
+        <h3>Supermercado Super Kan</h3>
+        <p>Cargo: Operador de Loja</p>
+        <p>Período: Fevereiro de 2021 a Junho de 2021</p>
+        <p>Responsabilidades: Repor produtos para vendas nas prateleiras, cuidar e limpar ambiente de movimento dos clientes, promover a melhor experiência ao cliente.</p>
+      </li>
+    </ul>
+  </section>
+  <section id="projetos">
+    <h2>Projetos</h2>
+    <ul>
+      <li>
+        <h3>Projeto X</h3>
+        <p>Descrição: ~~~~~~~~</p>
+        <p>Tecnologias usadas: ~~~~~~~~</p>
+      </li>
+      <li>
+        <h3>Projeto Y</h3>
+        <p>Descrição: ~~~~~~~~</p>
+        <p>Tecnologias usadas: ~~~~~~~~</p>
+      </li>
+    </ul>
+  </section>
+  <footer id="contato">
+    <h2>Contato</h2>
+    <p>Você pode entrar em contato comigo através do formulário abaixo ou pelas minhas redes sociais:</p>
+    <form>
+      <label for="nome">Nome:</label><br>
+      <input type="text" id="nome" name="nome"><br>
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email"><br>
+      <label for="mensagem">Mensagem:</label><br>
+      <textarea id="mensagem" name="mensagem"></textarea><br>
+      <button type="submit">Enviar</button>
+      <button type="reset">Limpar Campos</button>
+    </form>
+    <p>
+      <a href="https://www.linkedin.com/in/bruno-delgado-850178221/"><button id="linkedin">Linkedin</button></a>
+      <a href="https://github.com/brunobdelgado"><button id="github">GitHub</button></a>
+    </p>
+  </footer>
+</body>
+</html>
+<script type="text/javascript">
+    const form = document.querySelector('form');
+
+form.addEventListener('submit', (event) => {
+event.preventDefault();
+
+  const nome = form.nome.value;
+  const email = form.email.value;
+  const mensagem = form.mensagem.value;
+
+  if (nome.trim() === '' || email.trim() === '' || mensagem.trim() === '') {
+    alert('Por favor, preencha todos os campos.');
+    return;
+  }
+
+  alert(`Obrigado, ${nome}. Sua mensagem foi enviada com sucesso.`);
+});
+
+    const projetos = document.querySelector('#projetos ul');
+    projetos.addEventListener('mouseover', (event) => {
+    if (event.target.tagName === 'H3') {
+        event.target.style.color = '#333';
+    }
+});
+    projetos.addEventListener('mouseout', (event) => {
+    if (event.target.tagName === 'H3') {
+        event.target.style.color = 'black';
+    }
+});
+</script>
